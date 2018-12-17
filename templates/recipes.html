@@ -2,14 +2,7 @@
 
 {% block content %}
             {% for recipe in recipes %}
-                {{recipe.recipe_name}}
-                {{recipe.category_name}}
-                {{recipe.recipe_desc}}
-                {{recipe.is_vegan}}
-                {{recipe.is_gluten_free}}
-                {{recipe.is_vegetarian}}
-                {{recipe.tags}}
-                {{recipe.difficulty}}
+
 
     <ul class="collapsible">
 
@@ -18,11 +11,12 @@
               <i class="material-icons">
                 reorder
               </i> 
-                <strong>{{recipe.recipe_name}} </strong>  -  {{recipe.difficulty}} 
+                <strong>{{recipe.recipe_name}}</strong>   -  {{recipe.category_name}} 
           </div>
           <div class="collapsible-body">
               <span> 
-                  {{recipe.category_name}} 
+                  {{recipe.recipe_desc}} 
+                  {{recipe.difficulty}}
               </span>
           </div>
         </li>
