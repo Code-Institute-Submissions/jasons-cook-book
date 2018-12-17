@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+
+{% block content %}
+            {% for recipe in recipes %}
+                {{recipe.recipe_name}}
+                {{recipe.category_name}}
+                {{recipe.recipe_desc}}
+                {{recipe.is_vegan}}
+                {{recipe.is_gluten_free}}
+                {{recipe.is_vegetarian}}
+                {{recipe.tags}}
+                {{recipe.difficulty}}
+
+    <ul class="collapsible">
+
+        <li>
+          <div class="collapsible-header">
+              <i class="material-icons">
+                reorder
+              </i> 
+                <strong>{{recipe.recipe_name}} </strong>  -  {{recipe.difficulty}} 
+          </div>
+          <div class="collapsible-body">
+              <span> 
+                  {{recipe.category_name}} 
+              </span>
+          </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
