@@ -1,17 +1,26 @@
 {% extends "base.html"%}
 
 {% block content %}
-            {% for recipe in recipes %}
-
 
     <ul class="collapsible">
-
+      {% for recipe in recipes %}
         <li>
           <div class="collapsible-header">
-              <i class="material-icons">
-                reorder
-              </i> 
-                <strong>{{recipe.recipe_name}}</strong>   -  {{recipe.category_name}} 
+            <div class="col s1">
+                <i class="material-icons">reorder</i> 
+            </div>
+            <div class="col s2">
+                <div>
+                  <a  class="waves-effect waves-light btn btn_small">Done</a>
+                  <a href="{{url_for('edit_recipe', recipe_id=recipe.id)}}" class="waves-effect waves-light btn btn_small">Edit</a>
+                </div>
+            </div>
+            
+            <div class="recipe_header col s9">
+              <strong>{{recipe.recipe_name}}</strong>   -  {{recipe.category_name}} 
+            </div>
+              
+                
           </div>
           <div class="collapsible-body">
               <span> 
