@@ -33,36 +33,18 @@ def edit_recipe(recipe_id):
     return render_template("editrecipe.html", recipe=the_recipe, categories=all_categories)
     
 
-@app.route('/update_recipe/<recipe_id>', methods=["GET","POST"])
+@app.route('/update_recipe/<recipe_id>', methods=["GET""POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
-    
-    if 'is_vegan' not in request.form:
-        request.form.to_dict()['is_vegan']=False 
-    else:
-        request.form.to_dict()['is_vegan']=True
-    
-    if 'is_gluten_free' not in request.form:
-        request.form.to_dict()['is_gluten_free']=False 
-    else:
-        request.form.to_dict()['is_gluten_free']=True
-        
-    if 'is_vegetarian' not in request.form:
-        request.form.to_dict()['is_vegetarian']=False 
-    else:
-        request.form.to_dict()['is_vegetarian']=True
-        
-    if 'category_name' not in request.form:
-        request.form.to_dict()['category_name']="Unknown" 
-    else:
-        request.form.to_dict()['category_name']=True
-    
     recipes.update( {'_id':ObjectId(recipe_id)},
         {
             'recipe_name' : request.form['recipe_name'],
             'category_name' : request.form['category_name'],
             'recipe_desc' : request.form['recipe_desc'],
-        }) 
+            'is_vegan':request.form['is_vegan'],
+            'is_vegetarian':request.form['is_vegetarian'],
+            'is_gluten_free':request.form['is_gluten_free']
+        })
     return redirect(url_for('get_recipes'))
 
 @app.route('/delete_recipe/<recipe_id>')
