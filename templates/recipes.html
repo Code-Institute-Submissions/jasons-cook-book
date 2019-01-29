@@ -1,7 +1,7 @@
 {% extends "base.html"%}
 
 {% block content %}
-
+<h3>Recipes</h3>
     <ul class="collapsible">
       {% for recipe in recipes %}
         <li>
@@ -11,7 +11,7 @@
             </div>
             <div class="col s2">
                 <div>
-                  <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}} " class="waves-effect waves-light btn btn_small">Erase</a>
+                  <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}} " class="waves-effect waves-light btn btn_small confirm">Erase</a>
                   <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Edit</a>
                 </div>
             </div>

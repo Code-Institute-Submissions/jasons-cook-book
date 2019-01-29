@@ -65,4 +65,11 @@
         </div>
     </form>
 </div>
+<script language="JavaScript">
+function toggle(source) {
+  checkboxes = document.getElementsByName('foo');
+  for(var checkbox in checkboxes)
+    checkbox.checked = source.checked;
+}
+</script>
 {% endblock %}

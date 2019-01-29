@@ -10,8 +10,14 @@ app.config["MONGO_URI"] = "mongodb://admin:TLPjason1801@ds123796.mlab.com:23796/
 mongo = PyMongo(app)
 
 @app.route("/")
+def home():
+    categories = mongo.db.categories
+    return render_template("recipes.html", 
+    recipes=mongo.db.recipes.find())
+
 @app.route("/get_recipes")
 def get_recipes():
+    categories = mongo.db.categories
     return render_template("recipes.html", 
     recipes=mongo.db.recipes.find())
     
@@ -22,6 +28,7 @@ def add_recipe():
     
 @app.route("/insert_recipe", methods=["POST"])
 def insert_recipe():
+    categories = mongo.db.categories
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for("get_recipes"))
@@ -35,6 +42,7 @@ def edit_recipe(recipe_id):
 
 @app.route('/update_recipe/<recipe_id>', methods=["GET","POST"])
 def update_recipe(recipe_id):
+    categories = mongo.db.categories
     recipes = mongo.db.recipes
     
     if 'is_vegan' not in request.form:
@@ -67,6 +75,7 @@ def update_recipe(recipe_id):
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
+    categories = mongo.db.categories
     mongo.db.recipes.remove({'_id' : ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
@@ -76,6 +85,7 @@ def get_categories():
     
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
+    categories = mongo.db.categories
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
     return redirect(url_for('get_categories'))
     
@@ -88,16 +98,19 @@ def insert_category():
 
 @app.route('/new_category')
 def new_category():
+    categories = mongo.db.categories
     return render_template('addcategory.html')
         
     
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
+    categories = mongo.db.categories
     return render_template('editcategory.html',
     category=mongo.db.categories.find_one({'_id': ObjectId(category_id)}))
     
 @app.route('/update_category/<category_id>', methods=['POST'])
 def update_category(category_id):
+    categories = mongo.db.categories
     mongo.db.categories.update(
         {'_id': ObjectId(category_id)},
         {'category_name': request.form['category_name']})
