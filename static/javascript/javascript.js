@@ -1,3 +1,10 @@
+$(function() {
+  $('.open').on('click', function(e) {
+    e.stopPropagation();
+  });
+});
+
+
 $(document).ready(function(){
                 $('.single-item').slick({
                 autoplay: true,
@@ -8,15 +15,14 @@ $(document).ready(function(){
                     });
                 });
 
-
-                $(document).ready(function(){
-                    $('.collapsible').collapsible();
-                    $('select').material_select();
-                    $(".button-collapse").sideNav();
+$(document).ready(function(){
+ $('.collapsible').collapsible();
+ $('select').material_select();
+ $(".button-collapse").sideNav();
                  });
 
 
-                            $('a.twitter').confirm({
+ $('a.twitter').confirm({
                                 content: "...",
                                     });
                                     $('a.twitter').confirm({
@@ -26,13 +32,10 @@ $(document).ready(function(){
         }
     }
 });
-
-       
-
-                            var elems = document.getElementsByClassName('confirm');
-                            var confirmIt = function (e) {
-                                if (!confirm('Are you sure? This action cannot be undone!')) e.preventDefault();
-                                    };
-                                for (var i = 0, l = elems.length; i < l; i++) {
-                                elems[i].addEventListener('click', confirmIt, false);
-                                    }
+var elems = document.getElementsByClassName('confirm');
+  var confirmIt = function (e) {
+        if (!confirm('Are you sure? This action cannot be undone!')) e.preventDefault();
+         };
+        for (var i = 0, l = elems.length; i < l; i++) {
+           elems[i].addEventListener('click', confirmIt, false);
+        }
