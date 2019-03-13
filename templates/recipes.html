@@ -3,6 +3,7 @@
 {% block content %}
 <h3>Recipes</h3>
     <ul class="collapsible">
+    {% if recipes.count() > 0 %}
       {% for recipe in recipes %}
         <li>
           <div class="collapsible-header">
@@ -13,39 +14,79 @@
                 <div>
                   <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}} " class="waves-effect waves-light btn btn_small confirm">Erase</a>
                   <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Edit</a>
+                  {% if recipe.is_vegan %}
+                  <i class="material-icons">favorite_border</i> 
+                  {% endif %}
+                  {% if recipe.is_gluten_free %}
+                  <i class="material-icons">cake</i>
+                  {% endif %}
+                  {% if recipe.is_vegetarian %}
+                  <i class="material-icons">spa</i> 
+                  {% endif %}
+                  
                 </div>
             </div>
             
             <div class="recipe_header col s9">
-              <strong>{{recipe.recipe_name}}</strong>   -  {{recipe.category_name}} 
+              <strong>{{recipe.recipe_name}}</strong>   -  {{recipe.category_name}}
+              <!--{% if recipe %}-->
+              <!--<p>It looks like this recipe already exists!</p>-->
+              <!--{% endif %}-->
             </div>
-              
-                
           </div>
           <div class="collapsible-body">
               <span> 
-                  {{recipe.recipe_desc}} 
+                  {{recipe.recipe_desc}} <br><br>This recipe is: 
                   {{recipe.difficulty}}
                   
                   {% if recipe.is_vegan %}
                   <i class="material-icons">favorite_border</i> 
-                  Vegan
+                  Vegan &nbsp;
                   {% endif %}
-                  
                   
                   {% if recipe.is_gluten_free %}
                   <i class="material-icons">cake</i>
-                  Gluten Free
+                  Gluten Free &nbsp;
                   {% endif %}
                   
                   {% if recipe.is_vegetarian %}
                   <i class="material-icons">spa</i> 
-                  Vegetarian
+                  Vegetarian &nbsp;
                   {% endif %}
                   
               </span>
           </div>
         </li>
         {% endfor %}
+        {% else %}
+          <div class="collapsible-header">
+            <div class="col s1">
+            </div>
+            <div class="recipe_header col s9">
+              <strong class="no-recipe">It looks like there aren't any recipes right now. Help out by adding one!&nbsp;</strong>
+              <a href="{{url_for('add_recipe')}}"><button class="btn waves-effect waves-light">Add Recipe</button></a>
+            </div>
+          </div>
+        {% endif %}
     </ul>
+    <div class='single-item'>
+                <div><h3 class="carou-text">Welcome to my online Cook Book!</h3></div>
+                <div><h3 class="carou-text">You can create new recipes and assign categories</h3></div>
+                <div><h3 class="carou-text">Apply tags to recipes, such as vegan and gluten free</h3></div>
+                <div><h3 class="carou-text">Feel free to add anything  you like!</h3></div>
+            </div>
+             <script type="text/javascript">
+                function upVote() {
+                var score = parseInt(document.getElementById('vote').innerHTML);
+                score++;
+                document.getElementById('vote').innerHTML = score;
+                  }
+              </script>
+              <script type="text/javascript">
+                function downVote() {
+                var score = parseInt(document.getElementById('vote').innerHTML);
+                score--;
+                document.getElementById('vote').innerHTML = score;
+                  }
+              </script>
 {% endblock %}

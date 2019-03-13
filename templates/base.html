@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-
     <head>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{url_for('static', filename='slick-1.8.1/slick/slick-theme.css')}}" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     </head>
     <body>
 <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo">Recipe Book</a>
+                <a href="{{url_for('get_recipes')}}" class="brand-logo" data-step="1" data-intro="This is a tooltip!">Recipe Book</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">All Recipes</a></li>
-                 
+                    <li><a href="{{url_for('get_recipes')}}" data-intro"test" data-step=1>All Recipes</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
-                  
-                    <li></li>
-                   
                     <li><a href="{{url_for('get_categories')}}">All Categories</a></li>
                     <li><a href="{{url_for('new_category')}}">Add Category</a></li>
                 </ul>
@@ -31,42 +28,42 @@
             </div>
         </nav>
     </header>
+      <ul class="collapsible">
+    <li>
+      <div class="collapsible-header hint-title"><i class="material-icons">lightbulb_outline</i>Stuck? Click here for some help hints!</div>
+      <div class="collapsible-body"><span><div class="card">
+    <div class="card-content">
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#test1">How do I add a recipe or category?</a></li>
+        <li class="tab"><a href="#test2">How do I edit a recipe or category?</a></li>
+        <li class="tab"><a href="#test3">I accidentally deleted something...can I get it back?!</a></li>
+        <li class="tab"><a href="#test4">Can I add more tags?</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+      <div id="test1">You can add recipes and categories by clicking the respective buttons in the top right hand corner of the Cook book, or, if you don't have any recipes or categories saved, then you will be prompted to create a new one when you access the recipe and category menus.</div>
+      <div id="test2">Once you have created a recipe or category, you can edit them by click the 'edit' button on the the tab for the item you want to edit.</div>
+      <div id="test3">Unfortunately once you have deleted a recipe, it cannot be recovered.</div>
+      <div id="test4">As a user, you cannot add more tags than what has been provided, however you can email me at jason.street@learningpeople.co.uk and let me know if you have any suggestions for things to add!</div>
+    </div>
+  </div></span></div>
+    </li>
+  </ul>
         <div class="container">
         {% block content %} {% endblock %}
+            <div class='single-item'>
+                <div><img class="carousel-img" src="/static/imgs/burger-cropped.jpg" alt="Burger"></div>
+                <div><img class="carousel-img" src="/static/imgs/171027052520-processed-foods-exlarge-tease.jpg" alt="Burger"></div>
+                <div><img class="carousel-img" src="/static/imgs/chicken-wings-main.jpg" alt="Burger"></div>
+                <div><img class="carousel-img" src="/static/imgs/one_pot_chorizo_and_15611_16x9.jpg" alt="Burger"></div>
+            </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        <script type="text/javascript"> 
-                $(document).ready(function(){
-                    $('.collapsible').collapsible();
-                    $('select').material_select();
-                    $(".button-collapse").sideNav();
-                 });
-       </script>
-               <script type="text/javascript"> 
-                            $('a.twitter').confirm({
-                                content: "...",
-                                    });
-                                    $('a.twitter').confirm({
-                                buttons: {
-                    hey: function(){
-            location.href = this.$target.attr('href');
-        }
-    }
-});
-       </script>
-       
-        <script type="text/javascript">
-                            var elems = document.getElementsByClassName('confirm');
-                            var confirmIt = function (e) {
-                                if (!confirm('Are you sure? This action cannot be undone!')) e.preventDefault();
-                                    };
-                                for (var i = 0, l = elems.length; i < l; i++) {
-                                elems[i].addEventListener('click', confirmIt, false);
-                                    }
-                        </script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='javascript/javascript.js')}}" type="text/css"></script>
             </body>
 </html>

@@ -18,11 +18,13 @@ def home():
 @app.route("/get_recipes")
 def get_recipes():
     categories = mongo.db.categories
+    all_recipes = mongo.db.recipes 
     return render_template("recipes.html", 
     recipes=mongo.db.recipes.find())
     
 @app.route("/add_recipe")    
 def add_recipe():
+    all_recipes = mongo.db.recipes 
     return render_template("addrecipe.html", 
     categories=mongo.db.categories.find())
     
@@ -46,7 +48,7 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     
     if 'is_vegan' not in request.form:
-        request.form.to_dict()['is_vegan']=False 
+        request.form.to_dict()['is_vegan']=False
     else:
         request.form.to_dict()['is_vegan']=True
     
@@ -70,7 +72,7 @@ def update_recipe(recipe_id):
             'recipe_name' : request.form['recipe_name'],
             'category_name' : request.form['category_name'],
             'recipe_desc' : request.form['recipe_desc'],
-        }) 
+        })
     return redirect(url_for('get_recipes'))
 
 @app.route('/delete_recipe/<recipe_id>')
