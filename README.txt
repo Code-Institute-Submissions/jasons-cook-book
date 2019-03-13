@@ -2,7 +2,11 @@ Project 3 - Cook Book with Python and MongoDB
 
 ------------------------------------------DEPLOYMENT------------------------------------------
 
+The project has been deployed on Heroku:
 
+https://cook-book-flask-mongo.herokuapp.com/
+
+Please allow up to 60 seconds for the page to load, as it may be inactive if it hasn't been loaded in a while.
 
 ------------------------------------------BRIEFING------------------------------------------
 
