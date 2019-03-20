@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = "jasons_cook_book"
-app.config["MONGO_URI"] = "mongodb://admin:TLPjason1801@ds123796.mlab.com:23796/jasons_cook_book"
+app.config["MONGO_URI"] = os.environ.get("MONG_URI")
 
 mongo = PyMongo(app)
 
