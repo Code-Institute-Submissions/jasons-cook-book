@@ -9,7 +9,7 @@ The application is viewable on any modern browser. Please allow up to 45 seconds
 ## Testing
 
 
-### Goals
+## Goals
 
 
 ## Built With
