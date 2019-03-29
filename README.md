@@ -1,8 +1,9 @@
 # Project 3 - Cook Book
 
-## Getting Started
+## Deployment
 
-The application has been deployed at https://cook-book-flask-mongo.herokuapp.com/
+The application has been deployed via Heroku and can be found at https://cook-book-flask-mongo.herokuapp.com/
+Using the Heroku console within Cloud9, as well as the settings on the Heroku dashboard, I was able to push and deploy this project petty smoothly to Heroku. I have also used Heroku's config variables to store some data, such as Port and IP.
 
 The application is viewable on any modern browser. Please allow up to 45 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
 
