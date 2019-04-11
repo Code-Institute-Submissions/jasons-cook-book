@@ -1,5 +1,7 @@
 # Project 3 - Cook Book
 
+A web application utlizing python and MongoDB to create an editable database of cooking recipes.
+
 ## Deployment
 
 The application has been deployed via Heroku and can be found at https://cook-book-flask-mongo.herokuapp.com/
