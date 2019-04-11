@@ -48,6 +48,10 @@ I wanted to help menu to be a bit more modern and sleek looking, rather than rou
 
 I think if I were to re-approach this project, I might start by designing the interface before writing the code. There are merits for both approaches, however, to see which is better for me, approaching the project at a different angle might reveal a more optimal strategy. Additionally, I might incorporate some authentication and administration, possibly by building the application from the ground up with Django. this would allow for user accounts and authentication, as well as administration with a dedicated interface.
 
+## Improvements
+
+If I were to work on this project in the future with improved skills, one area I would look into improving would be adding some more python functionality. I did attempt to implement a review system, where reviews would be stored in a text file and displayed under each recipe. I had a lot of issues with this however, with the same reviews appearing under all recipes, users being able to edit each others reviews and so on. After some discussion with my mentor I decided to abandone this feature as it seemed out of scope for the project. I would also consider adding some more visual elements, to make the website a bit more dynamic, with maybe the feature to add videos and images to recipes.
+
 
 ## Built With
 
