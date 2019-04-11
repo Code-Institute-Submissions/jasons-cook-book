@@ -5,7 +5,16 @@
 The application has been deployed via Heroku and can be found at https://cook-book-flask-mongo.herokuapp.com/
 Using the Heroku console within Cloud9, as well as the settings on the Heroku dashboard, I was able to push and deploy this project petty smoothly to Heroku. I have also used Heroku's config variables to store some data, such as Port and IP, as well as security keys, such as the Mlabs API key.
 
-The application is viewable on any modern browser. Please allow up to 45 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
+The deploy on Heroku I did the following:
+
+1. Test local functionality for bugs
+2. Commit all files to GitHub for version control, and as a fallback
+3. Using the developer console in Cloud9 I logged into Heroku with ```heroku login```
+4. I added config vars using the Heroku GUI. Config vars can also be added with ```heroku config:set VAR=XXX```
+5. After committing I pushed to heroku with ```git push heroku master```
+
+
+The application is viewable on any modern browser. Please allow up to 30 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
 
 ## Testing
 
