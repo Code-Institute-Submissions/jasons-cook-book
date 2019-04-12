@@ -7,7 +7,9 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = "jasons_cook_book"
 app.config["MONGO_URI"] = os.environ.get("MONG_URI")
 
-mongo = PyMongo(app)
+##mongo = PyMongo(app)
+mongo = 'mongodb://<dbuser>:<dbpassword>@ds123796.mlab.com:23796/jasons_cook_book'
+
 
 @app.route("/")
 def home():
@@ -41,11 +43,10 @@ def edit_recipe(recipe_id):
     all_categories = mongo.db.categories.find()
     return render_template("editrecipe.html", recipe=the_recipe, categories=all_categories)
     
-
 @app.route('/update_recipe/<recipe_id>', methods=["GET","POST"])
 def update_recipe(recipe_id):
     categories = mongo.db.categories
-    recipes = mongo.db.recipes
+    recipes = mongo.db.recipes 
     
     if 'is_vegan' not in request.form:
         request.form.to_dict()['is_vegan']=False
@@ -103,7 +104,6 @@ def new_category():
     categories = mongo.db.categories
     return render_template('addcategory.html')
         
-    
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):
     categories = mongo.db.categories
