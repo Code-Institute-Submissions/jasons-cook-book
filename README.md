@@ -1,11 +1,22 @@
 # Project 3 - Cook Book
 
+A web application utlizing python and MongoDB to create an editable database of cooking recipes.
+
 ## Deployment
 
 The application has been deployed via Heroku and can be found at https://cook-book-flask-mongo.herokuapp.com/
-Using the Heroku console within Cloud9, as well as the settings on the Heroku dashboard, I was able to push and deploy this project petty smoothly to Heroku. I have also used Heroku's config variables to store some data, such as Port and IP.
+Using the Heroku console within Cloud9, as well as the settings on the Heroku dashboard, I was able to push and deploy this project petty smoothly to Heroku. I have also used Heroku's config variables to store some data, such as Port and IP, as well as security keys, such as the Mlabs API key.
 
-The application is viewable on any modern browser. Please allow up to 45 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
+The deploy on Heroku I did the following:
+
+1. Test local functionality for bugs
+2. Commit all files to GitHub for version control, and as a fallback
+3. Using the developer console in Cloud9 I logged into Heroku with ```heroku login```
+4. I added config vars using the Heroku GUI. Config vars can also be added with ```heroku config:set VAR=XXX```
+5. After committing I pushed to heroku with ```git push heroku master```
+
+
+The application is viewable on any modern browser. Please allow up to 30 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
 
 ## Testing
 
@@ -38,6 +49,10 @@ I wanted to create a simple and easy to use Cook Book with a warm and smooth int
 I wanted to help menu to be a bit more modern and sleek looking, rather than round and bubbly like the rest of the cookbook. I also wanted to keep it minimal, without pictures or too many animations. I felt like it was a good idea to not only keep the help menu separate from the application in terms of its location (and by hiding it) but also stylistically as well, so that the user can use the help interface easily and without getting lost, having to look around to try and find something.
 
 I think if I were to re-approach this project, I might start by designing the interface before writing the code. There are merits for both approaches, however, to see which is better for me, approaching the project at a different angle might reveal a more optimal strategy. Additionally, I might incorporate some authentication and administration, possibly by building the application from the ground up with Django. this would allow for user accounts and authentication, as well as administration with a dedicated interface.
+
+## Improvements
+
+If I were to work on this project in the future with improved skills, one area I would look into improving would be adding some more python functionality. I did attempt to implement a review system, where reviews would be stored in a text file and displayed under each recipe. I had a lot of issues with this however, with the same reviews appearing under all recipes, users being able to edit each others reviews and so on. After some discussion with my mentor I decided to abandone this feature as it seemed out of scope for the project. I would also consider adding some more visual elements, to make the website a bit more dynamic, with maybe the feature to add videos and images to recipes.
 
 
 ## Built With
