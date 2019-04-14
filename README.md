@@ -2,7 +2,14 @@
 
 A web application utlizing python and MongoDB to create an editable database of cooking recipes.
 
-## Deployment
+## Table of Contents  
+1. [Deployment](#Deployment)  
+2. [Testing](#Testing) 
+3. [Goals](#Goals)
+4. [Improvements](#Improvements)
+5. [Credits](#Credits)
+
+## Deployment <a name="Deployment"></a>
 
 The application has been deployed via Heroku and can be found at https://cook-book-flask-mongo.herokuapp.com/
 Using the Heroku console within Cloud9, as well as the settings on the Heroku dashboard, I was able to push and deploy this project petty smoothly to Heroku. I have also used Heroku's config variables to store some data, such as Port and IP, as well as security keys, such as the Mlabs API key.
@@ -18,7 +25,7 @@ The deploy on Heroku I did the following:
 
 The application is viewable on any modern browser. Please allow up to 30 seconds for the page to load, especially if you have not loaded it before, as it will need some time to load on Heroku's servers.
 
-## Testing
+## Testing <a name="Testing"></a>
 
 I have tested this application on Chrome, Vivaldi and Firefox browsers. To test the retrieval of data from MongoDB, I created test records directly inside of the database, as below:
 ```
@@ -42,7 +49,7 @@ $(document).ready(function(){
 ```
 This code would create a simple left to right animated slideshow with some text. I made sure that the slideshow was working and responsive before I added in any images and any more text. However, adding images did create some more problems, and since I only tested with text, I did foresee complications around using images in the slideshow.
 
-## Goals
+## Goals <a name="Goals"></a>
 
 I wanted to create a simple and easy to use Cook Book with a warm and smooth interface. I knew from the very beginning I wanted the project to be easy to use, but I didn't want the interface to be minimalistic or too modern. I think I have succeeded with that. For the colour scheme, I took inspiration fro apron and kitchen designs and settled for a light red and white background. I think the colour's work well, and don't obscure any of the text. I used Comic Sans as the font for the cookbook, as it as a friendly and appealing look to it, and isn't too sharp or modern. However, I did keep the default font for the help menu, as this has a slightly different design.
 
@@ -50,12 +57,11 @@ I wanted to help menu to be a bit more modern and sleek looking, rather than rou
 
 I think if I were to re-approach this project, I might start by designing the interface before writing the code. There are merits for both approaches, however, to see which is better for me, approaching the project at a different angle might reveal a more optimal strategy. Additionally, I might incorporate some authentication and administration, possibly by building the application from the ground up with Django. this would allow for user accounts and authentication, as well as administration with a dedicated interface.
 
-## Improvements
+## Improvements <a name="Improvements"></a>
 
 If I were to work on this project in the future with improved skills, one area I would look into improving would be adding some more python functionality. I did attempt to implement a review system, where reviews would be stored in a text file and displayed under each recipe. I had a lot of issues with this however, with the same reviews appearing under all recipes, users being able to edit each others reviews and so on. After some discussion with my mentor I decided to abandone this feature as it seemed out of scope for the project. I would also consider adding some more visual elements, to make the website a bit more dynamic, with maybe the feature to add videos and images to recipes.
 
-
-## Built With
+## Built With <a name="Credits"></a>
 
 * CSS3
 * HTML5
