@@ -49,6 +49,8 @@ $(document).ready(function(){
 ```
 This code would create a simple left to right animated slideshow with some text. I made sure that the slideshow was working and responsive before I added in any images and any more text. However, adding images did create some more problems, and since I only tested with text, I did foresee complications around using images in the slideshow.
 
+In addition to testing the functionality of the backend code, I have also tested the frontend aspects by testing the website on different browsers and by using the Chromium developer console to view the website on different mobile devices such as tablets and smart phones. Using the findings from these tests, I can see that my website is responsive and suitable for uses across multiple device types.
+
 ## Goals <a name="Goals"></a>
 
 I wanted to create a simple and easy to use Cook Book with a warm and smooth interface. I knew from the very beginning I wanted the project to be easy to use, but I didn't want the interface to be minimalistic or too modern. I think I have succeeded with that. For the colour scheme, I took inspiration fro apron and kitchen designs and settled for a light red and white background. I think the colour's work well, and don't obscure any of the text. I used Comic Sans as the font for the cookbook, as it as a friendly and appealing look to it, and isn't too sharp or modern. However, I did keep the default font for the help menu, as this has a slightly different design. I think this creates a nice contrast between the cookbook and the help section, which I wanted to keep relatively seperate for ease of use. 
