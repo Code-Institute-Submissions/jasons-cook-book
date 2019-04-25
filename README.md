@@ -63,7 +63,7 @@ While the recipes menu is more traditional in it's design, I wanted to help menu
 
 ![Image of Wire Frame](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/Ce53a54608deb00512cf8206be82c6f7c/projects/M5b430db21d6fed246ca1b023294112561556183776723/pages/a98b36f009a34c0e8512a20127441b5b/image/a98b36f009a34c0e8512a20127441b5b.png)
 
-![Mood Board](https://imgur.com/a/WLfOthu)
+![Mood Board](https://i.imgur.com/hdfsrLX.jpg)
 
 ## Improvements <a name="Improvements"></a>
 
