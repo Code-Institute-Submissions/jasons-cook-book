@@ -61,6 +61,8 @@ This BBC cooking recipe website is a good example of what I think a lot of moder
 
 While the recipes menu is more traditional in it's design, I wanted to help menu to be a bit more modern and sleek looking, rather than round and bubbly like the rest of the cookbook. I also wanted to keep it minimal, without pictures or too many animations. I felt like it was a good idea to not only keep the help menu separate from the application in terms of its location (and by hiding it) but also stylistically as well, so that the user can use the help interface easily and without getting lost, having to look around to try and find something.
 
+![Image of Wire Frame](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/Ce53a54608deb00512cf8206be82c6f7c/projects/M5b430db21d6fed246ca1b023294112561556183776723/pages/a98b36f009a34c0e8512a20127441b5b/image/a98b36f009a34c0e8512a20127441b5b.png)
+
 ## Improvements <a name="Improvements"></a>
 
 If I were to work on this project in the future with improved skills, one area I would look into improving would be adding some more python functionality. I did attempt to implement a review system, where reviews would be stored in a text file and displayed under each recipe. I had a lot of issues with this however, with the same reviews appearing under all recipes, users being able to edit each others reviews and so on. After some discussion with my mentor I decided to abandone this feature as it seemed out of scope for the project. I would also consider adding some more visual elements, to make the website a bit more dynamic, with maybe the feature to add videos and images to recipes.
