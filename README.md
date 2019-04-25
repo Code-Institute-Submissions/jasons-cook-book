@@ -63,6 +63,8 @@ While the recipes menu is more traditional in it's design, I wanted to help menu
 
 ![Image of Wire Frame](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/Ce53a54608deb00512cf8206be82c6f7c/projects/M5b430db21d6fed246ca1b023294112561556183776723/pages/a98b36f009a34c0e8512a20127441b5b/image/a98b36f009a34c0e8512a20127441b5b.png)
 
+I have created a wire frame which outlines the basic aspects of the website. I think I have kept my final website true to how I planned it out here, however some features that I had envisioned such as the carousel containing links to recipes, I hae not included in my final version. However the overall design is faithful to the wire frame, and certain elements that I commented on, such as the help section having a slightly different design to the rest of the website, I have kept. I also created a mood board which contains colours and themes that I wanted to use, such as the red and white patterns, the traditional kitchen/diner feel and the font, which I wanted tp be similar to the font used in the Ella's kitchen cook book (I used comic sans in the end which I thought was very similar).
+
 ![Mood Board](https://i.imgur.com/hdfsrLX.jpg)
 
 ## Improvements <a name="Improvements"></a>
