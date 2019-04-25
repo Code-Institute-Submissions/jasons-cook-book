@@ -67,6 +67,8 @@ If I were to work on this project in the future with improved skills, one area I
 
 If I were to re-approach this project, I might start by designing the interface before writing the code. There are merits for both approaches, however, to see which is better for me, approaching the project at a different angle might reveal a more optimal strategy. Additionally, I might incorporate some authentication and administration, possibly by building the application from the ground up with Django. this would allow for user accounts and authentication, as well as administration with a dedicated interface.
 
+I should also consider security concerns in my application as well. I have previously committed files with security keys that are used within my application, such as my MongoDB ID. In a real life application, having security flaws is a major issues, and presents many challenges for developers. Security flaws can damage the reputation of applications and developers, and can lead to data breaches. In the future if I were to develop an application that uses security keys, I should consider how I can remove these keys from my Git history, or prevent them from being a part of the commit in the first place. I have included my security keys as Heroku variables, which does provide some security, however the keys are part of my respository history, and can still be viewed.
+
 ## Built With <a name="Credits"></a>
 
 * CSS3
