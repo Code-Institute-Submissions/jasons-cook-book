@@ -36,6 +36,16 @@ I have tested this application on Chrome, Vivaldi and Firefox browsers. To test 
     "recipe_name": "test name",
     "category_name": "test category name",
 ```
+```
+class AppTestCase(unittest.TestCase):
+        
+        category = 'TestCat'
+        categories = mongo.db.categories
+        
+        def TestCategory(self):
+            categories = 'TestCat'
+            self.assertEqual(AppTestCase.category, categories)
+```
 This was before I had created a way for the end user to create records within this application. I tested the rendering of records before creating the user interface so that I didn't have to worry about it when the time came to create the UI. This data would be retrieved by the Python code, depending on where the user was in the application, and what they were requesting, such as when editing an existing recipe, it would pull through the name and category and description.
 
 In addition to testing the back-end portion of the project, I also tested the Javascript and responsiveness of the website. The following Javascript I added in order to test the slideshow animations, with some text stored in an HTML element. 
